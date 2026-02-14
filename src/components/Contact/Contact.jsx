@@ -2,9 +2,11 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTheme } from "../../context/ThemeContext";
 
 const Contact = () => {
   const form = useRef();
+  const { theme } = useTheme();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -26,7 +28,7 @@ const Contact = () => {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
-            theme: "dark",
+            theme: theme === 'light' ? 'light' : 'dark',
           });
         },
         (error) => {
@@ -38,7 +40,7 @@ const Contact = () => {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
-            theme: "dark",
+            theme: theme === 'light' ? 'light' : 'dark',
           });
         }
       );
@@ -47,23 +49,23 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
+      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw] transition-colors duration-300"
     >
       {/* Toast Container */}
-      <ToastContainer />
+      <ToastContainer theme={theme === 'light' ? 'light' : 'dark'} />
 
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white transition-colors duration-300">CONTACT</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className="text-gray-600 dark:text-gray-400 mt-4 text-lg font-semibold transition-colors duration-300">
           I’d love to hear from you—reach out for any opportunities or questions!
         </p>
       </div>
 
       {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
+      <div className="mt-8 w-full max-w-md bg-white dark:bg-[#0d081f] p-6 rounded-lg shadow-xl dark:shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white text-center transition-colors duration-300">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 
@@ -74,7 +76,7 @@ const Contact = () => {
             name="from_name"
             placeholder="Your Name"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 transition-colors duration-300 placeholder-gray-500 dark:placeholder-gray-400"
           />
 
           {/* EMAIL */}
@@ -83,7 +85,7 @@ const Contact = () => {
             name="from_email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 transition-colors duration-300 placeholder-gray-500 dark:placeholder-gray-400"
           />
 
           {/* SUBJECT */}
@@ -92,7 +94,7 @@ const Contact = () => {
             name="subject"
             placeholder="Subject"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 transition-colors duration-300 placeholder-gray-500 dark:placeholder-gray-400"
           />
 
           {/* MESSAGE */}
@@ -101,7 +103,7 @@ const Contact = () => {
             placeholder="Message"
             rows="4"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 transition-colors duration-300 placeholder-gray-500 dark:placeholder-gray-400"
           />
 
           {/* hidden */}
