@@ -50,6 +50,7 @@ import todoLogo from './assets/work_logo/todoLogo.png';
 import currencyLogo from './assets/work_logo/currencyLogo.png';
 import studysyncLogo from './assets/work_logo/studysyncLogo.png';
 import blogLogo from './assets/work_logo/Personal Blog Website.png';
+import aiResumeAnalyserLogo from './assets/work_logo/ai resume analyser.png';
 
 
 export const SkillsInfo = [
@@ -180,13 +181,14 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "LeetStats",
+    title: "AI Resume Analyser",
     description:
-      "A web app that tracks and displays LeetCode statistics such as solved problems, progress, and performance insights in a clean dashboard interface for developers.",
-    image: leetstatsLogo,
-    tags: ["HTML", "CSS", "JavaScript", "API"],
-    github: "https://github.com/yash-jhanwar/Leetstats",
-    webapp: "https://yash-jhanwar.github.io/Leetstats/",
+      "An AI-powered resume analysis tool that evaluates resumes, highlights top strengths and weaknesses, and provides an overall score to help users improve their resumes for better job prospects.",
+    image: aiResumeAnalyserLogo,
+    tags: ["React JS", "JavaScript", "Tailwind CSS", "Puter AI", "Vite"],
+    github: "https://github.com/Yash-Jhanwar/AI-Resume-Analyser",
+    webapp: "https://ai-resume-analyser-beta-three.vercel.app/",
+
   },
   {
     id: 1,
@@ -237,5 +239,15 @@ export const projects = [
     tags: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yash-jhanwar/blog",
     webapp: "https://yash-jhanwar.github.io/blog/",
+  },
+  {
+    id: 6,
+    title: "LeetStats",
+    description:
+      "A web app that tracks and displays LeetCode statistics such as solved problems, progress, and performance insights in a clean dashboard interface for developers.",
+    image: leetstatsLogo,
+    tags: ["HTML", "CSS", "JavaScript", "API"],
+    github: "https://github.com/yash-jhanwar/Leetstats",
+    webapp: "https://yash-jhanwar.github.io/Leetstats/",
   },
 ];
