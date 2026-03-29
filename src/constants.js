@@ -238,8 +238,7 @@ export const projects = [
     image: blogLogo,
     tags: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yash-jhanwar/blog",
-    webapp: "https://blog-eight-plum-42.vercel.app/
-    ",
+    webapp: "https://blog-eight-plum-42.vercel.app/",
   },
   {
     id: 6,
